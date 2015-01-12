@@ -51,6 +51,22 @@ CgangularGenerator.prototype.askFor = function askFor() {
     }.bind(this));
 };
 
+CgangularGenerator.prototype.askForStrict = function askFor() {
+    var cb = this.async();
+
+    var prompts = [{
+        type: 'confirm',
+        name: 'jsstrict',
+        message: 'Would you like your AngularJS code to \'use strict\'?',
+        default: true
+    }];
+
+    this.prompt(prompts, function (props) {
+        this.config.set('jsstrict', !!props.jsstrict);
+        cb();
+    }.bind(this));
+};
+
 CgangularGenerator.prototype.askForUiRouter = function askFor() {
     var cb = this.async();
 

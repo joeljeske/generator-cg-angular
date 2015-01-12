@@ -41,6 +41,7 @@ Here is an example configuration that matches the default behavior of the subgen
 ```js
 {
 	"uirouter": false,
+	"jsstrict": false,
 	"partialDirectory": "partial/",
 	"directiveDirectory": "directive/",
 	"serviceDirectory": "service/",
